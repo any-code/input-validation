@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <style>
+        input {
+            outline: none;
+            padding: 0.5rem;
+            font-size: 2rem;
+            border: 1px solid #CCC;
+        }
+
+        input:focus {
+            border-color: #42abff;
+        }
+
+        input.invalid {
+            background: rgba(255, 200, 199, 0.33);
+            border-color: #ffc8c7;
+        }
+    </style>
+</head>
+<body>
+    <form class="container">
+        <section>
+            <br>
+            <h3>Test Form, honestly does not submit :)</h3>
+            <hr><br>
+        </section>
+        <section>
+            <label for="name">Name</label><input onblur="handlers.blur(this)" data-required autocomplete="off" id="name" name="name">
+            <label for="email">Email</label><input onblur="handlers.blur(this)" data-valid-email autocomplete="off" id="email" name="email">
+        </section>
+        <section>
+            <br><hr><br>
+            <button>SUBMIT</button>
+        </section>
+    </form>
+    <script>
+        var handlers = {
+                blur: function(target) {
+                    target.className = validator.validate(target) ? '' : 'invalid';
+                }
+            }
+    </script>
+</body>
+</html>
