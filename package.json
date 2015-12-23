@@ -1,0 +1,31 @@
+{
+  "name": "input-validation",
+  "version": "1.0.0",
+  "description": "Very simple universal input validation module",
+  "main": "input-validation.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub-minify": "uglifyjs input-validation.js --compress --screw-ie8 --mangle > input-validation.min.js",
+    "pub-npm": "npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/any-code/input-validation.git"
+  },
+  "keywords": [
+    "input",
+    "validation",
+    "html",
+    "UMD"
+  ],
+  "author": {
+    "name": "Lee Tagg",
+    "email": "lee@anycode.io",
+    "url": "https://github.com/qrb"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/any-code/input-validation/issues"
+  },
+  "homepage": "https://github.com/any-code/input-validation#readme"
+}
